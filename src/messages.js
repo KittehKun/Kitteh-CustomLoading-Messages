@@ -15,7 +15,7 @@ class Mod {
         const logger = container.resolve("WinstonLogger"); //Get the logger from the server container
         const databaseServer = container.resolve("DatabaseServer");
         //Functions
-        logger.logWithColor("Loading: ~| Kitteh's Welcome Messages |~", LogTextColor_1.LogTextColor.white); //Notify of mod load
+        logger.info("Loading: ~| Kitteh's Welcome Messages |~"); //Notify of mod load
         //Main Logic
         const tables = databaseServer.getTables(); //Get Database from the Server
         const LOCALES_EN = tables.locales.global.en.interface;
